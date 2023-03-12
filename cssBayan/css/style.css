@@ -1,0 +1,170 @@
+/* Styles for header */
+
+.header-text{
+  width: 46%;
+  font-family: Comic Sans MS, serif;
+  margin: 0 auto;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+  border-bottom: 0.05em solid black;
+}
+/* Styles for accordion */
+.bayan-item{
+  padding: 0;
+  overflow: hidden;
+  color: blue;
+  font-family: Comic Sans MS, serif;
+  border-bottom: 0.1em solid black;
+}
+.bayan{
+  width: 46%;
+  margin: 0 auto;
+}
+.bayan-label{
+  font-size: 1.7em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.bayan-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bayan-lab{
+  cursor:pointer;
+}
+/* Styles for mem-boxes and memes and icon*/
+.img{
+  margin: 0 auto;
+  height: 0;
+  margin-bottom: 0.5em;
+  transition: height 0.3s;
+}
+.mem{
+  width: 22em;
+  height: 25em;
+  margin: 0 auto;
+  height: 0;
+}
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  visibility: hidden;
+}
+
+
+/* Styles for click*/
+.bayan-input{
+display: none;
+}
+.bayan-input:checked + label .bayan-text{
+  color: black;
+}
+.bayan-input:checked+label .bayan-text .icon{
+  transform: rotate(45deg);
+}
+.bayan-input:checked + label .img{
+  width: 22em;
+  height: 25em;
+}
+.bayan-input:checked+label .img .mem{
+  width: 22em;
+  height: 25em;
+} 
+/* Styles on active mouse */
+.bayan-item:active .bayan-text .icon path{
+  fill: blue;
+  filter: blur(0.1vh);
+}
+.bayan-item:active .bayan-text .bayan-label{
+  color: blue;
+  filter: blur(0.1vh);
+}
+.bayan-input:active+label .img .mem {
+  filter: blur(0.15vh);
+}
+/* Styles when cursor hover on items(and user with mouse)*/
+@media (hover:hover) {
+  .bayan:hover .bayan-item .bayan-text {
+      color: black;
+    }
+  
+    .bayan-item:hover .img {
+      width: 22em;
+      height: 25em;
+    }
+  
+    .bayan-item:hover .img .mem {
+      width: 22em;
+      height: 25em;
+    }
+  
+    .bayan-item:hover .bayan-text .icon {
+      transform: rotate(45deg);
+    }
+  
+    .bayan:hover .bayan-item .bayan-text .icon {
+      visibility: visible;
+    }
+}
+@media (hover:none) {
+  
+}
+/* media requests */
+@media (width < 1210px){
+  .header-text {
+    font-size: 1.64em;
+  }
+  .bayan-label{
+    font-size: 1.4em;
+  } 
+  .bayan-input:checked+label .img{
+    width: 18.7em;
+    height: 21.25em;
+  }
+
+  .bayan-input:checked+label .img .mem{
+    width: 18.7em;
+    height: 21.25em;
+  }
+}
+@media (width < 983px){
+
+  .header-text{
+    font-size: 1.17em;
+  }
+
+  .bayan-label{
+    font-size: 1em;
+  } 
+
+  .bayan-input:checked+label .img{
+    width: 15.89em;
+    height: 18.06em;
+  }
+
+  .bayan-input:checked+label .img .mem{
+    width: 15.89em;
+    height: 18.06em;
+  }
+}
+@media (width < 724px) {
+
+  .header-text{
+    font-size: 0.99em;
+  }
+
+  .bayan-label{
+    font-size: 0.85em;
+  }
+
+  .bayan-input:checked+label .img{
+    width: 13.5em;
+    height: 15.31em;
+  }
+
+  .bayan-input:checked+label .img .mem{
+    width: 13.5em;
+    height: 15.31em;
+  }
+}
